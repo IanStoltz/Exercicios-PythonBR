@@ -8,11 +8,13 @@ alturas = []
 
 # Coletando valores e inserindo nas listas
 for i in range(5):
-    i += 1
-    print(f"Pessoa {i}")
-    idades.append(int(input("Insira a idade: ")))
-    alturas.append(float(input("Insira a altura: ")))
+    pessoa = i + 1
+    print(f"Pessoa {pessoa}")
+    idade = int(input("Insira a idade: "))
+    altura = float(input("Insira a altura: "))
+    idades.append(idade)
+    alturas.append(altura)
 
 # Mostrando os resultados
-print(f" Idades inversas: {idades[::-1]}")
-print(f" Alturas inversas: {alturas[::-1]}")
+print(f"Idades inversas: {idades[::-1]}")
+print(f"Alturas inversas: {alturas[::-1]}")
