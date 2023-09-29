@@ -1,6 +1,6 @@
 # Exercícios Python
 
-Resolução dos exercícios propostos no site https://wiki.python.org.br/
+Resolução dos exercícios propostos no site https://wiki.python.org.br/ListaDeExercicios
 
 ## Tecnologias utilizadas
 <p align="left"> 
