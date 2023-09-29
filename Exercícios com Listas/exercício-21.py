@@ -36,29 +36,23 @@ O menor consumo é do peugeout.
 '''
 
 # Declarando listas
-
 veiculos = ["Fusca", "Gol", "Uno", "Vectra", "Peugeout"]
 consumos = [7, 10, 12.5, 9, 14.5]
 litros_totais = []
 valores_totais = []
-i = 1
-h = 0
-j = 1
 
 # Mostrando lista veículo / consumo
 print("Comparativo de consumo de Combustível")
 
-for veiculo in veiculos:
-    print(f'Veículo {i} \n Nome: {veiculos[i-1]} \n Km por litro: {consumos[i-1]}')
-    i += 1
+for i, veiculo in enumerate(veiculos):
+    print(f'Veículo {i+1} \n Nome: {veiculo} \n Km por litro: {consumos[i]}')
 
 # Calculando litros e valor para percorrer 1000km
 for consumo in consumos:
-    litros = 1000 / consumos[h]
+    litros = 1000 / consumo
     litros_totais.append(litros)
     valor = litros * 2.25
     valores_totais.append(valor)
-    h += 1
 
 # Calculando quem roda mais por litro
 idx_menor_consumo = consumos.index(max(consumos))
@@ -66,7 +60,6 @@ menor_consumo = veiculos[idx_menor_consumo]
 
 # Mostrando relatório final
 print("\nRelatório final")
-for veiculo in veiculos:
-    print(f'{j} - {veiculos[j-1]} - {consumos[j-1]} - {litros_totais[j-1]:.2f} litros - R$ {valores_totais[j-1]:.2f}')
-    j += 1
+for i, veiculo in enumerate(veiculos):
+    print(f'{i+1} - {veiculo} - {consumos[i]} - {litros_totais[i]:.2f} litros - R$ {valores_totais[i]:.2f}')
 print(f'O menor consumo é do {menor_consumo}')
