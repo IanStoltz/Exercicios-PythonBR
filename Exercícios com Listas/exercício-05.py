@@ -4,21 +4,20 @@ Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Im
 """
 
 # Declarando listas para armazenar os valores
-num = []
-par = []
-impar = []
+numeros = []
+pares = []
+impares = []
 
 # Coletando os valores, classificando e inserindo na lista
 for i in range(20):
-    i += 1
     numero = int(input("Insira um número: "))
-    num.append(numero)
+    numeros.append(numero)
     if numero % 2 == 0:
-        par.append(numero)
+        pares.append(numero)
     else:
-        impar.append(numero)
+        impares.append(numero)
 
 # Mostrando resultados
-print(f" Números inseridos: {num}")
-print(f" Números pares: {par}")
-print(f" Números ímpares: {impar}")
+print(f"Números inseridos: {numeros}")
+print(f"Números pares: {pares}")
+print(f"Números ímpares: {impares}")
