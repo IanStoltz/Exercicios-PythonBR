@@ -60,25 +60,23 @@ while True:
 
 
 # Função para calcular abono
-def funcao_calcula_abono(salario):
+def funcao_calcula_abono(salarios):
     dic_abonos = {}
     for salario in salarios:
         if salario <= 500:
             valor_abono = 100
-            total_abonos.append(valor_abono)
-            dic_abonos[salario] = valor_abono
-        elif salario > 500:
+        else:
             valor_abono = (salario * 20) / 100
-            total_abonos.append(valor_abono)
-            dic_abonos[salario] = valor_abono
+        total_abonos.append(valor_abono)
+        dic_abonos[salario] = valor_abono
     return dic_abonos
 
 
 # Calculo do abono chamando a função
-abonos = funcao_calcula_abono(salario)
+abonos = funcao_calcula_abono(salarios)
 
 # Calculando maior valor de abono pago
-maior_abono = abonos[max(abonos, key=abonos.get)]
+maior_abono = max(abonos.values())
 
 # Mostrando os resultados
 print("\nSalário      -   Abono")
