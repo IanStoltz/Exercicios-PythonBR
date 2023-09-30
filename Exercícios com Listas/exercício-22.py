@@ -15,7 +15,7 @@ Situação                        Quantidade              Percentual
 4- quebrado ou inutilizado              15                     15%
 '''
 
-# Declaração de listas para armazenar as quantidades
+# Declara listas para armazenar as quantidades
 situacoes = ["1 - Necessita de esfera", "2 - Necessita de limpeza", "3 - Troca do cabo ou conector", "4 - Quebrado ou inutilizado"]
 esfera = []
 limpeza = []
@@ -24,12 +24,12 @@ quebrado = []
 porcentagens = []
 quantidade = []
 
-# Mostrando as opções de input
+# Mostra as opções de input
 print("Situação")
 for situacao in situacoes: 
     print(situacao)
 
-# Coletando situação dos mouses e inserindo nas listas
+# Coleta situação dos mouses e insere nas listas
 while True:
     num = int(input("Insira a situação do mouse: "))
     while num < 0 or num > 4:
@@ -46,7 +46,7 @@ while True:
     else:
         quebrado.append(num)
 
-# Calculando total e porcentagens
+# Calcula total e porcentagens
 total = len(esfera) + len(limpeza) + len(troca) + len(quebrado)
 if total != 0:
     porc_esfera = (len(esfera) * 100) / total
@@ -56,7 +56,7 @@ if total != 0:
     quantidade.extend([len(esfera), len(limpeza), len(troca), len(quebrado)])
     porcentagens.extend([porc_esfera, porc_limpeza, porc_troca, porc_quebrado])
 
-# Mostrando resultados
+# Mostra os resultados
 if total != 0:
     print(f'\nQuantidade de mouses: {total}')
     print(f'\nSituação              Quantidade            Percentual')
