@@ -32,35 +32,35 @@ Espaço total ocupado: 2581,57 MB
 Espaço médio ocupado: 430,26 MB
 '''
 
-# Abrindo o arquivo que contém os valores
+# Abre o arquivo que contém os valores
 with open('usuarios.txt', 'r') as arquivo:
     # Armazenando os valores em uma lista
     linhas = arquivo.readlines()
 
-# Declarando listas para armazenar valores e total
+# Declara listas para armazenar valores e total
 usuarios = []
 espacos = []
 total = 0
 
-# Armazenando cada valor em sua lista
+# Armazena cada valor em sua lista
 for linha in linhas:
     usuario, espaco = linha.split()
     usuarios.append(usuario)
     espacos.append(int(espaco))
     total += int(espaco)
 
-# Abrindo o arquivo para escrita
+# Cria o arquivo para escrita
 with open('relatorio.txt', 'w') as arquivoRelatorio:
     arquivoRelatorio.write('ACME Inc.               Uso do espaço em disco pelos usuários\n')
     arquivoRelatorio.write('------------------------------------------------------------------------\n')
     arquivoRelatorio.write('Nr.  Usuário        Espaço utilizado     %% do uso\n')
 
-    # Calculando porcentagem do uso para cada usuário
+    # Calcula a porcentagem do uso para cada usuário
     for i in range(len(usuarios)):
         espacoMB = espacos[i] / (1024.0 * 1024.0)
         percentualUso = espacos[i] / total
         arquivoRelatorio.write(f'{i + 1} - {usuarios[i]} - {espacoMB:.2f} MB - {percentualUso * 100:.2f}%\n')
 
-    # Mostrando resultados
+    # Mostra os resultados
     arquivoRelatorio.write(f'Espaço total ocupado: {total / (1024.0 * 1024.0):.2f} MB\n')
     arquivoRelatorio.write(f'Espaço médio ocupado: {total / len(usuarios) / (1024.0 * 1024.0):.2f} MB\n')
