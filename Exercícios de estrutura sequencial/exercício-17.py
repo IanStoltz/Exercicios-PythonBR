@@ -9,7 +9,7 @@ Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, consid
 - misturar latas e galões, de forma que o desperdício de tinta seja menor.
 '''
 
-# Importando math para arredondar valores
+# Importa math para arredondar os valores
 import math
 
 # Declarando variáveis
@@ -18,23 +18,23 @@ litrosGalao = 3.6
 precoLata = 80
 precoGalao = 25
 
-# Coletando valor da área a ser pintada
+# Coleta o valor da área a ser pintada
 area = int(input("Insira a área a ser pintada, em metros quadrados : "))
 litrosNecessarios = area / 6
 
-# Calculando utilizando apenas latas e mostrando resultado
+# Calcula a necessidade se utilizadas apenas latas e mostra o resultado
 qtdLatas = math.ceil(litrosNecessarios / litrosLata)
 custoLatas = qtdLatas * precoLata
 print ("Somente latas: ")
 print (f"O cliente precisará comprar {qtdLatas} latas, que custarão R$ {custoLatas}")
 
-# Calculando utilizando apenas galões e mostrando resultado
+# Calcula a necessidade se utilizados apenas galões e mostra o resultado
 qtdGaloes = math.ceil(litrosNecessarios / litrosGalao)
 custoGaloes = qtdGaloes * precoGalao
 print ("Somente galões: ")
 print (f"O cliente precisará comprar {qtdGaloes} galões, que custarão R$ {custoGaloes}")
 
-# Calculando utilizando latas e galões com 10% de folga
+# Calcula a necessidade utilizando latas e galões com 10% de folga e mostra o resultado
 folga = litrosNecessarios * 1.1
 qtdLatas1 = folga // litrosLata
 litrosNecessariosFolga = folga - (qtdLatas1 * litrosLata)
