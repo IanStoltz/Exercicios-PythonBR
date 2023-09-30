@@ -3,12 +3,12 @@ Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene num
 imprima o número de alunos com média maior ou igual a 7.0.
 """
 
-# Declarando variáveis e listas para armazenar valores
+# Declara variáveis e listas para armazenar valores
 alunos = 1
 todasMedias = []
 medias7 = []
 
-# Estabelecendo limite de entradas
+# Estabelece o limite de entradas
 while alunos <= 10:
     print(f"Aluno {alunos}")
     notas = []
@@ -22,6 +22,6 @@ while alunos <= 10:
         medias7.append(media)
     alunos += 1
 
-# Mostrando resultados
+# Mostra os resultados
 alunos7 = len(medias7)
 print(f"O número de alunos com média maior ou igual a 7 é de: {alunos7}")
