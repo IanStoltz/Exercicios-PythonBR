@@ -31,14 +31,14 @@ Total                    8800
 O Sistema Operacional mais votado foi o Unix, com 3500 votos, correspondendo a 40% dos votos.
 """
 
-# Variáveis para armazenamento dos votos, total e contagem
+# Declara variáveis para armazenamento dos votos, total, sistemas e contagem
 votos = []
 total_votos = 0
 sistemas = ["Windows", "Unix   ", "Linux  ", "Netware", "Mac OS ", "Outro  "]
 h = 0
 
 
-# Função que calcula o percentual dos votos
+# Declara função que calcula o percentual dos votos
 def calcular_percentual_votos(votos, total_votos):
     percentuais = {}
     for voto in votos:
@@ -57,7 +57,7 @@ print(
     "\n6- Outro\n"
 )
 
-# Coleta do número do voto e adição na lista de votos
+# Coleta o número do voto e adiciona na lista de votos
 while True:
     voto = int(input("Número da resposta (0=fim): "))
     if voto == 0:
@@ -68,10 +68,10 @@ while True:
     votos.append(voto)
     total_votos += 1
 
-# Cálculo do percentual de votos chamando a função
+# Declara variável que armazena o percentual de votos após  chamar a função
 percentuais = calcular_percentual_votos(votos, total_votos)
 
-# Mostrando os resultados
+# Mostra os resultados
 print(f"\nSistema Operacional   |   Votos      |   % de votos   ")
 print("----------------------  ------------- -------------")
 for sistema, percentual in percentuais.items():
@@ -82,10 +82,10 @@ for sistema, percentual in percentuais.items():
 print("----------------------  ------------- ")
 print(f"Total                      {total_votos}")
 
-# Calculando quem foi mais votado com base no percentual
+# Calcula quem foi mais votado com base no percentual
 mais_votado = max(percentuais, key=percentuais.get)
 
-# Mostrando os resultados do sistema mais votado, com seu número de votos e percentual
+# Mostra os resultados do sistema mais votado, seu número de votos e percentual
 print(
     f"\nO Sistema Operacional mais votado foi o {sistemas[mais_votado-1]}, com {votos.count(mais_votado)} votos, correspondendo a {percentuais[mais_votado]:.2f}% do total de votos"
 )
