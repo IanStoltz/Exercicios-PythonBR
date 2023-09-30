@@ -18,10 +18,11 @@ Saltos: [6.5, 6.1, 6.2, 5.4, 5.3]
 Média dos saltos: 5.9 m
 """
 
+# Declara lista para armazenar os atletas e define os saltos
 atletas = []
 saltos = "Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto"
 
-# Coletando nome dos atletas, valores de cada salto e realizando a média
+# Coleta nome dos atletas ou encerra o programa
 while True:
     nome = input("Digite o nome do atleta (ou enter para encerrar o programa): ")
     if nome == "":
@@ -32,15 +33,18 @@ while True:
         "media": 0,
     }
 
+    # Mostra o nome do atleta
     print(f'Atleta: {atleta.get("nome")}')
 
+    # Calcula a média para cada atleta
     for i in range(5):
         atleta.get("saltos").append(float(input(f"{saltos[i]} salto: ")))
     atleta["media"] = sum(atleta.get("saltos")) / len(atleta.get("saltos"))
 
+    # Insere o valor na lista
     atletas.append(atleta)
 
-# Mostrando os resultados
+# Mostra os resultados para cada atleta
 print("\nResultado final")
 for atleta in atletas:
     print(
