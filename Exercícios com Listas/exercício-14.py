@@ -6,10 +6,10 @@ Se a pessoa responder positivamente a 2 questões ela deve ser classificada como
 Caso contrário, ele será classificado como "Inocente".
 """
 
-# Criando uma lista para armazenar as respostas
+# Cria uma lista para armazenar as respostas
 respostas = []
 
-# Iniciando o interrogatório e armazenando as respostas na lista
+# Inicia o interrogatório e armazena as respostas na lista
 print("Interrogatório. Digite S para sim e N para não")
 p1 = input("Telefonou para a vítima? ")
 if p1.lower() == "s":
@@ -27,7 +27,7 @@ p5 = input("Já trabalhou com a vítima? ")
 if p5.lower() == "s":
     respostas.append(p5)
 
-# Comparando o número de respostas, classificando e mostrando o resultado
+# Compara o número de respostas, classifica e mostra o resultado
 if len(respostas) == 5:
     print("Assassino")
 elif 3 <= len(respostas) <= 4:
