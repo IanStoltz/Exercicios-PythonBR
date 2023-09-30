@@ -15,18 +15,18 @@ Calcule e mostre o total do seu salário no referido mês, sabendo-se que são d
 = Salário Liquido : R$
 '''
 
-# Coletando valores
+# Coleta os valores
 valorPorHora = float(input("Quanto você recebe por hora trabalhada? "))
 horasTrabalhadas = float(input("Quantas horas você trabalhou este mês? "))
 
-# Calculando salário e descontos
+# Calcula o salário e os descontos
 salarioBruto = valorPorHora * horasTrabalhadas
 ir = (salarioBruto * 11) / 100
 inss = (salarioBruto * 8) / 100
 sindicato = (salarioBruto * 5) / 100
 salarioLiq = salarioBruto - ir - inss - sindicato
 
-# Mostrando os resultados
+# Mostra os resultados
 print (
     f'\n+ Salário Bruto : R$ {salarioBruto}'
     f'\n- IR (11%) : R$ {ir}'
