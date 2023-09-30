@@ -3,12 +3,12 @@ Faça um Programa que leia 20 números inteiros e armazene-os num vetor.
 Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Imprima os três vetores.
 """
 
-# Declarando listas para armazenar os valores
+# Declara listas para armazenar os valores
 numeros = []
 pares = []
 impares = []
 
-# Coletando os valores, classificando e inserindo na lista
+# Coleta  os valores, classificando e inserindo na lista
 for i in range(20):
     numero = int(input("Insira um número: "))
     numeros.append(numero)
@@ -17,7 +17,7 @@ for i in range(20):
     else:
         impares.append(numero)
 
-# Mostrando resultados
+# Mostra os resultados
 print(f"Números inseridos: {numeros}")
 print(f"Números pares: {pares}")
 print(f"Números ímpares: {impares}")
