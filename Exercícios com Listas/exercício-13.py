@@ -4,7 +4,7 @@ Após isto, calcule a média anual das temperaturas e mostre todas as temperatur
 (mostrar o mês por extenso: Janeiro, Fevereiro, . . . )
 """
 
-# Declarando listas e variáveis
+# Declara listas e variáveis
 temperatura = []
 meses = [
     "Janeiro",
@@ -22,17 +22,17 @@ meses = [
 ]
 media = 0
 
-# Coletando e armazenando as temperaturas
+# Coleta e armazena as temperaturas
 for mes in meses:
     temperatura.append(float(input(f"Insira a temperatura de {mes}: ")))
     media += temperatura[-1]
 
-# Calculando a média das temperaturas
+# Calcula a média das temperaturas
 media = media / len(meses)
 
-# Comparando temperaturas acima da média
+# Verifica temperaturas acima da média
 acimaMedia = {mes: temp for mes, temp in zip(meses, temperatura) if temp > media}
 
-# Mostrando os resultados
+# Mostra os resultados
 print(f"Média das temperaturas anuais: {media:.2f}")
 print(f"Meses com temperatura acima da média: {acimaMedia}")
