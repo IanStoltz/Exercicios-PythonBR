@@ -45,7 +45,7 @@ funcionarios_com_piso_abono = 0
 print("Projeção de gastos com Abono")
 print("============================")
 
-# Coletando os salários e atribuindo piso do abono
+# Coleta os salários e insere na lista ou encerra o programa
 while True:
     salario = float(input("Salário: "))
     if salario == 0:
@@ -54,12 +54,16 @@ while True:
         print("Insira um salário maior do que 0")
         salario = float(input("Salário: "))
     elif salario <= 500:
+        
+        # Confere o valor e incrementa o num. de funcionarios com piso 
         funcionarios_com_piso_abono += 1
+
+    # Insere os salários na lista e incrementa o num. de funcionários
     salarios.append(salario)
     funcionarios += 1
 
 
-# Função para calcular abono
+# Declara função para calcular abono
 def funcao_calcula_abono(salarios):
     dic_abonos = {}
     for salario in salarios:
@@ -72,13 +76,13 @@ def funcao_calcula_abono(salarios):
     return dic_abonos
 
 
-# Calculo do abono chamando a função
+# Declara variável para armazenar abonos ao chamar a função
 abonos = funcao_calcula_abono(salarios)
 
-# Calculando maior valor de abono pago
+# Calculan o maior valor de abono pago
 maior_abono = max(abonos.values())
 
-# Mostrando os resultados
+# Mostra os resultados
 print("\nSalário      -   Abono")
 
 for salario, abono in abonos.items():
