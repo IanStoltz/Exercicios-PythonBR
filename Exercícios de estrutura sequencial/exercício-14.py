@@ -7,10 +7,10 @@ Gravar na variável excesso a quantidade de quilos além do limite e na variáve
 Imprima os dados do programa com as mensagens adequadas.
 '''
 
-# Coletando valor da quantia pescada
+# Coleta o valor da quantia pescada
 peso = float(input("Insira a quantia pescada em kg: "))
 
-# Comparando peso com limite, calculando excesso, multa e mostrando os resultados.
+# Compara o peso com o limite, calcula o excesso, a multa e mostra os resultados.
 if peso > 50:
 	excesso = peso - 50
 	multa = excesso * 4
