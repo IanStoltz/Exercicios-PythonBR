@@ -6,6 +6,7 @@ quantos vendedores receberam salários nos seguintes intervalos de valores:
 $200 - $299; $300 - $399; $400 - $499; $500 - $599; $600 - $699; $700 - $799; $800 - $899; $900 - $999; $1000 em diante
 """
 
+# Declara listas para armazenar valores, para contagem, e define limites e intervalos
 salarios = []
 contadores = [0] * 8
 limites_intervalos = [299, 399, 499, 599, 699, 799, 899, 999]
@@ -20,10 +21,10 @@ intervalos = [
     "$900 - $999",
     "$1000 em diante",
 ]
-# Coletando número de vendedores
+# Coleta número de vendedores
 num_vendedores = int(input("Quantos vendedores a loja tem? "))
 
-# Coletando salários de cada vendedor
+# Coleta salários de cada vendedor
 for vendedor in range(1, num_vendedores + 1):
     vendas = float(input(f"\nQuanto o vendedor {vendedor} arrecadou essa semana? "))
     salario = vendas + 200 + ((vendas * 9) / 100)
@@ -31,17 +32,17 @@ for vendedor in range(1, num_vendedores + 1):
 
 print(f"Os salários são: {salarios}")
 
-# Associando os salários conforme faixa salarial
+# Associa os salários conforme faixa salarial
 for salario in salarios:
     for i, limite in enumerate(limites_intervalos):
         if salario <= limite:
             contadores[i] += 1
             break
 
-# Associando salários na faixa acima de 1000
+# Associa salários na faixa acima de 1000
 contadores.append(sum(1 for salario in salarios if salario >= 1000))
 
-# Mostrando os intervalos e a quantia de vendedores em cada um
+# Mostra os intervalos e a quantia de vendedores em cada um
 for i in range(len(contadores)):
     print(
         f"Número de vendedores com salário no intervalo {intervalos[i]}: {contadores[i]}"
