@@ -39,12 +39,12 @@ Jogador Votos           %
 11              1               12,5%
 O melhor jogador foi o número 9, com 4 votos, correspondendo a 50% do total de votos.
 """
-# Variáveis para armazenamento dos votos e total
+# Declara variáveis para armazenamento dos votos e do total
 votos = []
 total_votos = 0
 
 
-# Função que calcula o percentual dos votos
+# Declara função que calcula o percentual dos votos
 def calcular_percentual_votos(votos, total_votos):
     percentuais = {}
     for voto in votos:
@@ -55,7 +55,7 @@ def calcular_percentual_votos(votos, total_votos):
 
 print("Enquete: Quem foi o melhor jogador? ")
 
-# Coleta do número do jogador e adição na lista de votos
+# Coleta o número do jogador e adiciona na lista de votos
 while True:
     voto = int(input("Número do jogador (0=fim): "))
     if voto == 0:
@@ -66,10 +66,10 @@ while True:
     votos.append(voto)
     total_votos += 1
 
-# Cálculo do percentual de votos chamando a função
+# Declara variável que armazena o valor após chamar a função
 percentuais = calcular_percentual_votos(votos, total_votos)
 
-# Mostrando os resultados
+# Mostra os resultados
 if total_votos > 0:
     print("Resultado da votação: ")
     print(f"\nForam computados {total_votos} votos.")
@@ -80,10 +80,10 @@ if total_votos > 0:
             f"{jogador}         |    {votos.count(jogador)}         |   {percentual:.2f}"
         )
 
-    # Calculando quem foi mais votado com base no percentual
+    # Calcula quem foi mais votado com base no percentual
     mais_votado = max(percentuais, key=percentuais.get)
 
-    # Mostrando os resultados do jogador mais votado, com seu número de votos e percentual
+    # Mostra os resultados do jogador mais votado, com seu número de votos e percentual
     print(
         f"O melhor jogador foi o número {mais_votado}, com {votos.count(mais_votado)} votos, correspondendo a {percentuais[mais_votado]:.2f}% do total de votos"
     )
