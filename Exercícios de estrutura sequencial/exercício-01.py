@@ -1,4 +1,4 @@
 ''' Faça um Programa que mostre a mensagem "Hello world" na tela. '''
 
-# Mostrando mensagem
+# Mostra mensagem
 print("Hello world")
