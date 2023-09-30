@@ -35,30 +35,30 @@ Relatório Final
 O menor consumo é do peugeout.
 '''
 
-# Declarando listas
+# Declara listas
 veiculos = ["Fusca", "Gol", "Uno", "Vectra", "Peugeout"]
 consumos = [7, 10, 12.5, 9, 14.5]
 litros_totais = []
 valores_totais = []
 
-# Mostrando lista veículo / consumo
+# Mostra lista  de veículo e seu consumo
 print("Comparativo de consumo de Combustível")
 
 for i, veiculo in enumerate(veiculos):
     print(f'Veículo {i+1} \n Nome: {veiculo} \n Km por litro: {consumos[i]}')
 
-# Calculando litros e valor para percorrer 1000km
+# Calcula litros necessários e valor total para percorrer 1000km
 for consumo in consumos:
     litros = 1000 / consumo
     litros_totais.append(litros)
     valor = litros * 2.25
     valores_totais.append(valor)
 
-# Calculando quem roda mais por litro
+# Calcula quem roda mais por litro
 idx_menor_consumo = consumos.index(max(consumos))
 menor_consumo = veiculos[idx_menor_consumo]
 
-# Mostrando relatório final
+# Mostra resultado final
 print("\nRelatório final")
 for i, veiculo in enumerate(veiculos):
     print(f'{i+1} - {veiculo} - {consumos[i]} - {litros_totais[i]:.2f} litros - R$ {valores_totais[i]:.2f}')
