@@ -3,15 +3,15 @@ Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que
 Para homens: (72.7*h) - 58; Para mulheres: (62.1*h) - 44.7
 '''
 
-# Coletando sexo e altura
+# Coleta o sexo e a altura
 sexo = str(input("Entre seu sexo: (masculino ou feminino) "))
 altura = float(input("Insira sua altura em metros: "))
 
-# Calculando peso ideal masculino e feminino
+# Calcula o peso ideal masculino e feminino
 pesoIdealM = (72.7 * altura) - 58
 pesoIdealF = (62.1 * altura) - 44.7
 
-# Classificando e mostrando resultado
+# Classifica e mostra o resultado
 if sexo.lower() == "masculino":
 	print (f'Seu peso ideal é de: {pesoIdealM} kg')
 elif sexo.lower() == "feminino":
