@@ -1,7 +1,7 @@
 # Exercícios Python
 
-Resolução dos exercícios propostos no site https://wiki.python.org.br/ListaDeExercicios
-Com este repositório busquei ajudar alunos de um curso básico de programação que tiveram dificuldade em aprender a introdução de Python. 
+Resolução dos exercícios propostos no site https://wiki.python.org.br/ListaDeExercicios <br>
+Com este repositório busquei ajudar alunos de um curso básico de programação que tiveram dificuldade em aprender a introdução de Python. <br>
 Todas as resoluções estão comentadas para auxiliar no entendimento do código.
 
 ## Tecnologias utilizadas
